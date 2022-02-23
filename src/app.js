@@ -15,6 +15,8 @@ app.get("/stats/:name", (req, res) => {
     const {name} = req.params;
     if (name in data) {
         res.render("stats", data);
+    } else {
+        res.send("does not exist");
     }
 })
 
