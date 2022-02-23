@@ -1,0 +1,24 @@
+{
+  "name": "triton-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigcontreras/triton-stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigcontreras/triton-stats/issues"
+  },
+  "homepage": "https://github.com/craigcontreras/triton-stats#readme",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
