@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/public/css/");
     eleventyConfig.addWatchTarget("./src/assets/img/");
     eleventyConfig.addPassthroughCopy("./src/assets/img/");
+    eleventyConfig.addPassthroughCopy("./src/assets/json/");
     eleventyConfig.addWatchTarget("./src/public/js/");
     eleventyConfig.addPassthroughCopy("./src/public/js/");
     eleventyConfig.addWatchTarget("./src/assets/fontawesome/");

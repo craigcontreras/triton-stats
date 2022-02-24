@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TritonMC</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1><%= name %></h1>
-    <p>Under construction</p>
+    <div class="transition transition-1 is-active"></div>
+    <div id="intro-anim"></div>
+    <section id="posts">
+        <section id="newest-post">
+            <img src=<%= collections.sortByDate[0].data.largeThumbnail %> class="blurred-edge" alt="">
+            <div id="content">
+                <h2>
+                    <%= collections.sortByDate[0].data.title %>
+                </h2>
+                <p id="date">Written by <%= collections.sortByDate[0].data.author %> | <time datetime=<%= collections.sortByDate[0].date %>><%= js.dateReadable(collections.sortByDate[0].date) %></time></p>
+                <p><%= collections.sortByDate[0].data.longDesc %></p>    
+                <a class="transitionable" href=<%=collections.sortByDate[0].url %>>Read</a>
+            </div>
+        </section>
+        <section id="older-posts">
+            <% let post; %>
+                <% if (collections.sortByDate.length> 1) { %>
+                    <% for (let i=0; i < collections.sortByDate.length; i++) { %>
+                        <% post=collections.sortByDate[i]; %>
+                            <% if (i> 0) { %>
+                                <div class="post">
+                                    <img src=<%= post.data.smallThumbnail %> alt="">
+                                    <div id="content">
+                                        <h2>
+                                            <%= post.data.title %>
+                                        </h2>
+                                        <p><%= post.data.shortDesc %></p>
+                                        <a class="transitionable" href=<%=post.url %>></a>
+                                    </div>
+                                </div>
+                            <% } %>
+                        <% } %>
+                 <% } %>
+        </section>
+    </section>
+    <%- include("partials/footer.ejs") %> 
 </body>
+
+<script src="/public/js/transition.js"></script>
+<script src="/public/js/index.js"></script>
 </html>

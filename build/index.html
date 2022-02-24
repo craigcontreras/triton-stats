@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TritonMC</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>TritonMC</h1>
-    <p>Under construction</p>
+    <div class="transition transition-1 is-active"></div>
+    <div id="intro-anim"></div>
+    <section id="posts">
+        <section id="newest-post">
+            <img src=assets/img/large-2.png class="blurred-edge" alt="">
+            <div id="content">
+                <h2>
+                    Welcome to the TritonMC blog
+                </h2>
+                <p id="date">Written by deadskin | <time datetime=Wed Feb 23 2022 19:00:00 GMT-0500 (Eastern Standard Time)>Feb 23, 2022</time></p>
+                <p>Hey, welcome to the blog! Right now, things might seem pretty...</p>    
+                <a class="transitionable" href=/posts/welcome-to-the-tritonmc-blog/>Read</a>
+            </div>
+        </section>
+        <section id="older-posts">
+            
+                
+        </section>
+    </section>
+    <footer>
+    <h2>&copy; TritonMC 2022</h2>
+</footer> 
 </body>
+
+<script src="/public/js/transition.js"></script>
+<script src="/public/js/index.js"></script>
 </html>

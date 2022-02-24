@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/post.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="transition transition-1 is-active"></div>
+    <main>
+        <article>
+            <h1>
+                <%= title %>
+            </h1>
+            <span>Written by <%= author %> | <time datetime=<%= date %>><%= js.dateReadable(date) %></time></span>
+            <%- content %>
+        </article>
+    </main>
+    <%- include("partials/footer.ejs") %>
+</body>
+<script src="/public/js/transition.js"></script>
+</html>
