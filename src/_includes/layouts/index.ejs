@@ -42,8 +42,9 @@
                                         <h2>
                                             <%= post.data.title %>
                                         </h2>
+                                        <p id="date">Written by <%= post.data.author %> | <time datetime=<%= collections.sortByDate[0].date %>><%= js.dateReadable(collections.sortByDate[0].date) %></time></p>
                                         <p><%= post.data.shortDesc %></p>
-                                        <a class="transitionable" href=<%=post.url %>></a>
+                                        <a class="transitionable" href=<%=post.url %>>Read</a>
                                     </div>
                                 </div>
                             <% } %>
