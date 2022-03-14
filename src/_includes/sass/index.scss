@@ -16,6 +16,7 @@
 }
 
 .post {
+    padding: 2em;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -23,8 +24,7 @@
     img {
         max-width: 50%;
         max-height: 50%;
-        border-top-right-radius: 1em;
-        border-bottom-right-radius: 1em;
+        border-radius: 1em;
     }
 
     #date {
